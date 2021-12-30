@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajasthan Tourism</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fontawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                Rajasthan<span>Tourism</span>
+            </div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#about-us">About</a>
+                <a href="#filter-gallery">Explore</a>
+                <a href="#hotel-section">Hotels</a>
+                <a href="#container">Contact</a>
+            </div>
+            <!-- <div class="icon">
+                <i class="fa fa-search"></i>
+                <a href="#">Login</a>
+            </div> -->
+        </nav>
+        <script>
+            var i = 0;
+            var images = [];
+            var time = 3000;
+            images[0] = 'images/p5.png';
+            images[1] = 'images/p3.png';
+            images[2] = 'images/p2.png';
+            images[3] = 'images/p4.jpg';
+
+            function changeImg() {
+                document.slide.src = images[i];
+                if (i < images.length - 1) {
+                    i++;
+                } else {
+                    i = 0;
+                }
+                setTimeout("changeImg()", time);
+            }
+            window.onload = changeImg;
+        </script>
+        <img name="slide" width="100%" height="500">
+    </header>
+    <section id="about-us">
+        <h1>About Us</h1>
+        <div class="about">
+            <div class="about-info">
+                <p>Rajasthan is one of the most popular tourist destinations in India, for both domestic and international tourists.
+                     Rajasthan attracts tourists for its historical forts, palaces, art and culture with its slogan "Padharo mhare desh' <br> <br>
+                    <a href="#">Jaane Kya Dikh Jaye <i class="fa fa-arrow-right"></i></a></p>
+            </div>
+            <div class="about-img">
+                <img src="images/p8.webp">
+            </div>
+        </div>
+    </section>
+
+    <section id="filter-gallery">
+        <h1 class="heading">Explore these Places</h1>
+        <div class="cards">
+            <div class="travel-menu">
+                <img src="images/r18.jpg " alt=" ">
+                <h2>Jodhpur</h2>
+                <p>The Blue City</p>
+                <button>View Package</button>
+                
+            </div>
+            <div class="travel-menu ">
+                <img src="images/p15.jpg " alt=" ">
+                <h2>Jaipur</h2>
+                <p>The Pink City.</p>
+                <button>View Package</button>
+            </div>
+            <div class="travel-menu ">
+                <img src="images/p18.jpg " alt=" ">
+                <h2>Jaisalmer</h2>
+                <p>The Golden city </p>
+                <button>View Package</button>
+            </div>
+            <div class="travel-menu ">
+                <img src="images/p12.jpg" alt="">
+                <h2>Udaipur</h2>
+                <p>THE CITY OF LAKES</p>
+                <button>View Package</button>
+            </div>
+            <div class="travel-menu ">
+                <img src="images/pr20.jpg " alt=" ">
+                <h2>Pushkar</h2>
+                <p>one of the oldest cities in India</p>
+                <button>View Package</button>
+            </div>
+            <div class="travel-menu ">
+                <img src="images/Ranakpur-India.jpg.optimal.jpg " alt=" ">
+                <h2>Ranakpur</h2>
+                <p>In the Ranges of Aravli Hills</p>
+                <button>View Package</button>
+            </div>
+        </div>
+    </section>
+    <section id="hotel-section">
+        <h1>Find Places to stay</h1>
+        <div class="hotel">
+            <div class="hotel-opt">
+                <img src="images/02u.jpg" alt=" ">
+                <h2>Taj Lake Palace</h2>
+                <p>Flat 25% Off <br>Udaipur</p>
+                <button>View More</button>
+            </div>
+            <div class="hotel-opt">
+                <img src="images//01u.jpg" alt=" ">
+                <h2>The Oberoi Udaivilas</h2>
+                <p>Flat 20% Off <br>Udaipur</p>
+                <button>View More</button>
+            </div>
+            <div class="hotel-opt">
+                <img src="images/08p.jpeg" alt=" ">
+                <h2>Jaipur Marriott Hotel</h2>
+                <p>Flat 10% Off <br>Jaipur</p>
+                <button>View More</button>
+            </div>
+            <div class="hotel-opt">
+                <img src="images/188p.jpg" alt=" ">
+                <h2>Fateh Bagh, Ranakpur</h2>
+                <p>Flat 15% Off <br>Sadri</p>
+                <button>View More</button>
+            </div>
+
+        </div>
+    </section>
+    
+
+    <h1>Contact us</h1>
+<section id="container">
+    <div class="container">
+        <form action="#">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </section>
+    <footer>
+        <div class="center"> Copyright &copy; www.RajasthanTourism.com. All Rights Reserved <br></div>
+    </footer>
+
+
+</body>
+
+</html>
